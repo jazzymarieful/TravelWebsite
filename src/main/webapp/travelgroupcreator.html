@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Travel Group Creator</title>
+</head>
+<body>
+<h1>Travel Group Creator</h1>
+<h2 class="reportChoose">Choose travelers (Up to 5 travelers)</h2>
+
+<div class="reportpage">
+    <div class="form-container" id="traveler-section">
+        <label for="firstname"><b>First name:</b></label>
+        <input type="text" id="firstname" name="firstname"><br>
+        <label for="lastname"><b>Last name:</b></label>
+        <input type="text" id="lastname" name="lastname"><br>
+        <label for="passport"><b>Passport:</b></label>
+        <input type="text" id="passport" name="passport"><br>
+        <label for="age"><b>Age:</b></label>
+        <input type="number" id="age" name="age">
+        <button id="btnAddTraveller" onclick="addTraveler()">Add Traveler</button>
+        <button onclick="resetTravelerInput()">Reset</button>
+        <br>
+        <br>
+        <!--    <button id="btnUpdateTraveler" onclick="updateTraveler()">Update Traveler</button>-->
+        <!--    <button id="btnRemoveTraveler" onclick="removeTraveler()">Remove Traveler</button>-->
+    </div>
+
+    <div id="view-travelers" style="font-family:'Comic Sans MS',system-ui;font-size: 1rem; color: blueviolet"></div>
+    <br>
+    <button class="button" id="btnSaveTravelers" onclick="saveTraveler()">Save Travelers</button>
+    <br>
+    <br>
+    <button id="btnGetTravelers" onclick="getTravelers()">Get Travelers</button>
+    <button onclick="document.location = 'travelplancreator.html'">Travel Plan</button>
+    <div id="get-travelers"></div>
+</div>
+
+<script type="text/javascript" src="travelgroupcreator.js"></script>
+</body>
+</html>

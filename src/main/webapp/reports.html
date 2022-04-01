@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:display="http://www.w3.org/1999/xhtml" xmlns:font-family="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Travel Reports</title>
+</head>
+<body>
+<h1>Travel Reports</h1>
+<h2 class="reportChoose">Choose type of report and period for query</h2>
+
+<div class="reportpage"><div id="report-container">
+    <label for="reportSelector">Choose report:</label>
+    <select id="reportSelector" name="reportSelector"></select>
+</div>
+    <br>
+    <div id="period-container">
+        <label for="yearSelector">Choose year:</label>
+        <select id="yearSelector" name="yearSelector"></select>
+        <br>
+        <br>
+        <p style="font-weight: bold; display: inline">Yearly:</p>
+        <input type="radio" id="yearly" name="period" value="5" />
+        <label for="yearly" title="">yearly</label>
+        <br>
+        <p style="font-weight: bold; display: inline">Semiyearly:</p>
+        <input type="radio" id="semiyearly (firsthalf)" name="period" value="6" />
+        <label for="semiyearly (firsthalf)" title="">first half</label>
+        <input type="radio" id="semiyearly (secondhalf)" name="period" value="7" />
+        <label for="semiyearly (secondhalf)" title="">second half</label>
+        <br>
+        <p style="font-weight: bold; display: inline">Quarterly:</p>
+        <input type="radio" id="quarterly (1st)" name="period" value="1" />
+        <label for="quarterly (1st)" title="">1st quarter</label>
+        <input type="radio" id="quarterly (2nd)" name="period" value="2" />
+        <label for="quarterly (2nd)" title="">2nd quarter</label>
+        <input type="radio" id="quarterly (3rd)" name="period" value="3" />
+        <label for="quarterly (3rd)" title="">3rd quarter</label>
+        <input type="radio" id="quarterly (4th)" name="period" value="4" />
+        <label for="quarterly (4th)" title="">4th quarter</label>
+    </div>
+    <p id="selectedReport" style="background-color:powderblue; font-family:'Comic Sans MS',system-ui;font-size: 1rem; color: blueviolet; width:200px"></p>
+    <p id="selectedYear" style="background-color:powderblue; font-family:'Comic Sans MS',system-ui;font-size: 1rem; color: blueviolet; width:200px"></p>
+    <p id="selectedPeriod" style="background-color:powderblue; font-family:'Comic Sans MS',system-ui;font-size: 1rem; color: blueviolet; width:200px"></p>
+    <br>
+    <button class="button" id="btnGetReport" onclick="getReport()">Get Report</button>
+</div>
+
+<div class="split right">
+    <h2>Report result</h2>
+    <div id="view-reports" style="font-family:'Comic Sans MS',system-ui;font-size: 1rem; color: blueviolet;"></div>
+</div>
+
+<script type="text/javascript" src="reports.js"></script>
+
+</body>
+</html>

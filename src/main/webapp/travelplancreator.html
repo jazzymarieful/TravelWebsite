@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Travel Plan Creator</title>
+</head>
+<body>
+<h1>Travel Plan Creator</h1>
+<h2 class="reportChoose">Choose destinations in order of visit (Up to 5 destinations)</h2>
+<!--<div id="get-destinations"></div>-->
+<div class="reportpage">
+    <div id="container">
+        <label for="destinationlist">Choose destinations:</label>
+        <select id="destinationlist" name="destinationlist"></select>
+        <button id="btnResetSelection" onclick="resetDestinationSelection()">Reset</button>
+    </div>
+    <br>
+    <div id="view-destinations" style="font-family:'Comic Sans MS',system-ui;font-size: 1rem; color: blueviolet"></div>
+
+    <h2>Choose rating for accommodations (Up to 5 stars)</h2>
+    <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="5 stars">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="4 stars">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="3 stars">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="2 stars">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="1 star">1 star</label>
+    </div>
+    <br>
+    <br>
+    <h2>Choose start/end date of travel (Up to 31 days of travel)</h2>
+    <div>
+        <label for="startdate">Start Date:</label>
+        <input type="date" id="startdate" name="startdate"><br>
+        <label for="enddate">End Date:</label>
+        <input type="date" id="enddate" name="enddate">
+        <button id="btnConfirmDates">Confirm Dates</button>
+    </div>
+    <br>
+    <button class="button" onclick="saveTravelPlan()">Save Travel Plan</button>
+</div>
+
+
+<script src="travelplancreator.js"></script>
+</body>
+</html>

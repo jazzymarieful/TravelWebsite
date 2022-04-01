@@ -1,0 +1,272 @@
+.rate {
+    margin: 1px;
+    padding: 1px;
+}
+.rate {
+    float: left;
+    height: 30px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.button {
+    padding: 12.5px 7.5px;
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 11px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.split {
+    height: 100%;
+    width: 60%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-left: 20px;
+}
+
+.right {
+    right: 0;
+    background-color: lightcyan;
+}
+
+.open-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12.5px 7.5px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 11px;
+    box-shadow: 0 9px #999;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}
+
+.welcomeMessage {
+    position: fixed;
+    top: 5px;
+    right: 135px;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 120px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.update-container {
+    display: none;
+    position: relative;
+    top: 400px;
+    left: 120px;
+    /*border: 3px solid #f1f1f1;*/
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 250px;
+    padding: 10px;
+    background-color: #f6f6f6;
+}
+
+.form-container input[type=text], .form-container input[type=password], .form-container input[type=number] {
+    width: 85%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: lightgray;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    /*background-color: #ddd;*/
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 11px;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+h1 {
+    font-family: "Candara Light", serif;
+    font-size: 45px;
+    color: darkblue;
+    position: fixed;
+    top: -15px;
+    left: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    position: relative;
+    font-family: "Lucida Bright", serif;
+    color: rebeccapurple;
+    text-decoration: underline;
+    text-decoration-color: greenyellow;
+    text-decoration-thickness: 10px;
+    /*top: 75px;*/
+}
+
+.reportpage {
+    position: relative;
+    top: 95px;
+}
+
+.reportChoose {
+    position: relative;
+    top: 80px;
+}
+
+.travelpackagelistheader {
+    position: relative;
+    top: -80px;
+    left: 580px;
+}
+
+.travelpackagelist {
+    position: relative;
+    top: -90px;
+    left: 550px;
+    margin:20px;
+    padding:4px;
+    width: 900px;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+
+#view-travelers {
+    position: absolute;
+    top: 0;
+    left: 290px;
+}
+
+.image-container {
+    position: absolute;
+    top: 90px;
+    width: 99%;
+    height: 200px;
+}
+
+.bannerimage {
+    /*position: relative;*/
+    /*top: 90px;*/
+    width: 100%;
+    height: 100%;
+}
+
+.slogan {
+    position: absolute;
+    bottom: -12.5px;
+    right: 20px;
+    font-weight: bold;
+    font-family: "Brush Script MT", serif;
+    font-size: 35px;
+    color: #37490c;
+}
+
+.loggedInPage {
+    position: absolute;
+    top: 310px;
+}
+
+#mainMenu {
+    position: fixed;
+    left: 190px;
+    width:900px;
+    font-family: "Candara Light", serif;
+    font-size: 25px;
+    /*background-color: #ffaacf;*/
+}
+#mainMenu li {
+    display:block;
+    width:250px;
+    float:left;
+    margin-left:2px;
+    text-align: center;
+    background-color: #4CAF50;
+    border-radius: 11px;
+
+}
+
+#mainMenu a {
+    display:block;
+    padding:3px;
+    text-decoration:none;
+    background-color: #4CAF50;
+    border-radius: 11px;
+    color:#009;
+}
+
+#mainMenu a:hover {
+    background-color:#009;
+    color:#fff;
+}
+
+

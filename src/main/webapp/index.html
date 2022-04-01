@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Homepage</title>
+</head>
+
+<body>
+
+<div>
+    <header>
+        <h1>Travelon</h1>
+    </header>
+    <nav hidden id="navbar">
+        <ul id="mainMenu">
+            <li><a href="travelgroupcreator.html">Create Travel Package</a></li>
+            <li><a href="reports.html">View Travel Reports</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="open-button" id="btnSign" onclick="signIn()">Sign In</button>
+</div>
+
+<div class="image-container">
+    <img class="bannerimage" src="images/website_banner.jpg" alt="island">
+    <p class="slogan">Your adventure awaits!!!</p>
+</div>
+
+<div class="form-popup" id="myForm">
+    <div class="form-container">
+        <h2>Login</h2>
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter username" id="username" name="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="text" placeholder="Enter Password" id="password" name="password" required>
+
+        <button class="btn" onclick="logIn()">Log In</button>
+<!--        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>-->
+    </div>
+</div>
+
+<div hidden class="loggedInPage" id="loggedInPage">
+    <h2 id="welcomeMassage" class="welcomeMessage"></h2>
+<!--    <button class="button" id="btnTravelPackageCreator" onclick="document.location = 'travelgroupcreator.html'">Create Travel Package</button>-->
+<!--    <button class="button" id="btnReports" onclick="document.location = 'reports.html'">View Travel Reports</button>-->
+<!--    <br>-->
+<!--    <br>-->
+    <button class="button" onclick="viewTravelPackages()">View Travel Packages</button>
+
+    <h2 class="travelpackagelistheader">Your Travel Packages</h2>
+    <div class="travelpackagelist">
+        <div id="view-travelpackages" style="font-family:'Comic Sans MS',system-ui;font-size: 1rem; color: blueviolet"></div>
+    </div>
+
+</div>
+
+<div class="update-container" id="update-section">
+    <div class="form-container">
+        <h2>Update Traveler</h2>
+        <label for="firstname"><b>First name:</b></label>
+        <input type="text" id="firstname" name="firstname"><br>
+        <label for="lastname"><b>Last name:</b></label>
+        <input type="text" id="lastname" name="lastname"><br>
+        <label for="passport"><b>Passport:</b></label>
+        <input type="text" id="passport" name="passport"><br>
+        <label for="age"><b>Age:</b></label>
+        <input type="number" id="age" name="age"><br>
+        <button style="margin-right: 5px" id="btnUpdate">Update Traveler</button>
+        <button onclick="cancelUpdate()">Cancel</button>
+    </div>
+</div>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
