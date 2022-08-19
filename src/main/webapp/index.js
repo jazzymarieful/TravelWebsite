@@ -193,7 +193,15 @@ function showUpdatePopup(id) {
     });
 }
 
+function clearInputFields() {
+    document.getElementById("firstname").value = "";
+    document.getElementById("lastname").value = "";
+    document.getElementById("passport").value = "";
+    document.getElementById("age").value = "";
+}
+
 function cancelUpdate() {
+    clearInputFields();
     document.getElementById("update-section").style.display = "none";
 }
 

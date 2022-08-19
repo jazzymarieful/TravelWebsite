@@ -10,6 +10,7 @@ public class HelloResource {
     @GET
     @Produces(MediaType.APPLICATION_XML)
     public String hello() {
+        System.out.println("Heerrooorr");
         return "Hello, World!";
     }
 }

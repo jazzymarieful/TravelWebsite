@@ -33,7 +33,7 @@ public class TravelerDAO {
         entityManager.persist(traveler);
         entityManager.getTransaction().commit();
 //        if (checkRecordIncrease() > tableSize) {
-//            System.out.println("Traveler inserted");
+//            Sys tem.out.println("Traveler inserted");
 //            return true;
 //        } else {
 //            return false;
